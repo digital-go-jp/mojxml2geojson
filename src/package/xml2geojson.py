@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import os
+import pathlib
 import xmltodict
 import package.MojXmlDef as MojXmlDef
 import package.MojXmlPolygon as MojXmlPolygon
@@ -12,10 +13,7 @@ def SaveGeoJson(src_file, exclude_flag):
 
     mojGeojson = MojGeojson(moj_obj, exclude_flag)
 
-    path = os.path.dirname(src_file)
-    name = os.path.splitext(os.path.basename(src_file))[0]
-    save_name = name + ".geojson"
-    dst_name = path + '/' + save_name
+    dst_name = pathlib.Path(src_file).with_suffix(".geojson").resolve()
 
     with open(dst_name, 'w', encoding='utf-8') as f:
         f.write(mojGeojson)
