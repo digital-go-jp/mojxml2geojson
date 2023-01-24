@@ -21,7 +21,7 @@ pip install .
 pip install git+https://github.com/JDA-DM/mojxml2geojson.git
 ```
 
-## Usege
+## Usage
 
 ### Single File
 
