@@ -15,7 +15,7 @@
 pip install .
 ```
 
-### From Github
+### From GitHub
 
 ```bash
 pip install git+https://github.com/JDA-DM/mojxml2geojson.git
