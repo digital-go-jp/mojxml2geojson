@@ -1,37 +1,21 @@
-FROM ubuntu:latest
+FROM python:3.10-slim
 
 RUN apt-get update && apt-get -y install \
-    git \
-    make \
     gdal-bin \
-    build-essential \
-    g++ \
-    libsqlite3-0 \
-    libsqlite3-dev \
-    zlib1g-dev \
-    python3 \
-    python3-pip \
-    python3-venv \
-    python3-gdal \
-    jq && \
-  mkdir -p /tmp/build && cd /tmp/build && \
-  git clone https://github.com/felt/tippecanoe.git && \
-  cd tippecanoe && \
-  make -j2 && \
-  make install && \
-  cd /tmp && \
-  rm -r /tmp/build && \
+    libgdal-dev \
+    build-essential && \
+  pip install --upgrade pip && \
+  pip install --no-cache-dir setuptools==57.4.0 && \
+  pip install --no-cache-dir GDAL==3.2.2 && \
+  apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
-  apt-get remove -y git make build-essential g++ zlib1g-dev libsqlite3-dev && \
+  apt-get remove -y build-essential libgdal-dev && \
   apt-get autoremove -y && \
   mkdir /app
 
 WORKDIR /app
 ADD . .
 
-RUN python3 -m venv --system-site-packages .venv && \
-  . .venv/bin/activate && \
-  pip install --upgrade pip && \
-  pip install .
+RUN pip install .
 
 ENTRYPOINT [ "./entrypoint.sh" ]
