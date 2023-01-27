@@ -15,7 +15,7 @@
 pip install .
 ```
 
-### From Github
+### From GitHub
 
 ```bash
 pip install git+https://github.com/JDA-DM/mojxml2geojson.git
@@ -23,23 +23,8 @@ pip install git+https://github.com/JDA-DM/mojxml2geojson.git
 
 ## Usage
 
-### Single File
-
 ```bash
 mojxml2geojson ./moj.xml
-```
-
-### Multiple files
-
-```bash
-cd [target directory]
-ls -1 *.xml|xargs -I{} mojxml2geojson ./{}
-```
-
-**Parallel Processing**
-
-```bash
-ls -1 *.xml|xargs -P100 -I{} mojxml2geojson ./{}
 ```
 
 ### PyTest
