@@ -18,4 +18,4 @@ ADD . .
 
 RUN pip install .
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "./docker-entrypoint.sh" ]
