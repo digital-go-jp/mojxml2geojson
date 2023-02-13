@@ -27,6 +27,18 @@ pip install git+https://github.com/JDA-DM/mojxml2geojson.git
 mojxml2geojson ./moj.xml
 ```
 
+### Usage with Docker
+
+```
+docker build -t mojxml2geojson .
+```
+
+`data` ディレクトリを作成し、変換するファイルを入れる。
+
+```
+docker run --rm -v $(pwd)/data:/data mojxml2geojson /data/moj.xml 
+```
+
 ### PyTest
 
 ```bash
