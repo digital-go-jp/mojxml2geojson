@@ -1,5 +1,8 @@
 # mojxml2geojson
 
+- Data converter for the National Land Register data (mojxml).
+  - [What is the National Land Register data?](https://data-gov.note.jp/n/n367f1e368d22#a12a292e-4301-4cf1-979f-74f3bef09999)
+
 - The conversion specifications are as follows.
   - Extracts and outputs only the brush polygon data and attributes necessary to maintain the Address Base Registry from the Map XML data. Reference points, boundary points, and boundary lines are not output.
   - For public coordinate information data, convert coordinate values to longitude and latitude (JGD2011). Add representative point coordinates as attributes.
