@@ -1,5 +1,10 @@
 # mojxml2geojson
 
+- The conversion specifications are as follows.
+  - Extracts and outputs only the brush polygon data and attributes necessary to maintain the Address Base Registry from the Map XML data. Reference points, boundary points, and boundary lines are not output.
+  - For public coordinate information data, convert coordinate values to longitude and latitude (JGD2011). Add representative point coordinates as attributes.
+  - Data in arbitrary coordinate information are not converted to coordinate values.
+
 ## Requirement
 
 - GDAL
@@ -33,7 +38,7 @@ mojxml2geojson ./moj.xml
 docker build -t mojxml2geojson .
 ```
 
-`data` ディレクトリを作成し、変換するファイルを入れる。
+Create a `data` directory and put in the files to be converted.
 
 ```
 docker run --rm -v $(pwd)/data:/data mojxml2geojson /data/moj.xml 
