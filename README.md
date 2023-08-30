@@ -26,7 +26,7 @@ pip install .
 ### From GitHub
 
 ```bash
-pip install git+https://github.com/JDA-DM/mojxml2geojson.git
+pip install git+https://github.com/digital-go-jp/mojxml2geojson.git
 ```
 
 ## Usage
