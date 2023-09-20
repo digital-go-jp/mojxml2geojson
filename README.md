@@ -8,12 +8,16 @@
   - For public coordinate information data, convert coordinate values to longitude and latitude (JGD2011). Add representative point coordinates as attributes.
   - Data in arbitrary coordinate information are not converted to coordinate values.
 
+## Note
+- If you are looking for the prepared geojson data, you can download from https://front.geospatial.jp/moj-chizu-shp-download/ (You don't need to install this project)
+
 ## Requirement
 
 - GDAL
   - https://gdal.org/download.html
 - python 3.*
 - pip 22.*
+- Anaconda 3.*
 
 ## Installing
 
