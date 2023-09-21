@@ -21,6 +21,8 @@
 
 ## Installing
 
+- [Installation for Windows (without WSL2)](./build-windows.md)
+
 ### setup.py
 
 ```bash

@@ -4,10 +4,23 @@ Note: If you are looking for the prepared geojson data, you can download from ht
 # How to build on Windows (without WSL2)
 
 To build this project on Windows, you need:
+- Git
 - Python 3
 - pip 22 or over
 - Anaconda
 - GDAL (download from https://gdal.org/download.html )
+
+## Install Git
+
+1. Download the latest version of Git from https://git-scm.com/download/win
+
+2. Install it.
+
+3. Verify that Git is installed correctly.
+
+```
+> git --version
+```
 
 ## Install Python 3
 
@@ -19,9 +32,7 @@ To build this project on Windows, you need:
 
 ```
 > py --version
-Python 3.11.5
 > py -m pip --version
-pip 23.2.1 from C:\Program Files\Python311\Lib\site-packages\pip (python 3.11)
 ```
 
 ## Install Anaconda
@@ -48,18 +59,6 @@ pip 23.2.1 from C:\Program Files\Python311\Lib\site-packages\pip (python 3.11)
 5. Verify that Anaconda is installed correctly by running the following command in a terminal:
 ```
 >conda info
-
-     active environment : base
-    active env location : C:\(path to)\anaconda3
-            shell level : 1
-       user config file : C:\(path to)\.condarc
- populated config files :
-          conda version : 23.7.4
-    conda-build version : 3.26.0
-         python version : 3.11.4.final.0
-       virtual packages : __archspec=1=x86_64
-                          __win=0=0
-...
 ```
 
 ## Install GDAL for Windows
@@ -69,18 +68,6 @@ pip 23.2.1 from C:\Program Files\Python311\Lib\site-packages\pip (python 3.11)
 ```
 conda install -c conda-forge gdal
 ```
-
-2. After installation, you may need to set the following environment variables.
-
-
-variable name     | value
-------------------|----------------------
-PATH              | Add `C:\Program Files\GDAL`
-GDAL_DATA         | `C:\Program Files\GDAL`
-GDAL_DRIVER_PATH  | `C:\Program Files\GDAL\gdalplugins`
-USE_PATH_FOR_GDAL_PYTHON | `YES`
-
-3. Close and reopen the terminal window to reload the environment variables.
 
 ## Install mojxml2geojson
 
