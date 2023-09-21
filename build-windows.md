@@ -1,7 +1,7 @@
 Note: If you are looking for the prepared geojson data, you can download from https://front.geospatial.jp/moj-chizu-shp-download/
 (You don't need to install this project)
 
-# How to build on Windows (without WSL2)
+# Build on Windows (without WSL2)
 
 To build this project on Windows, you need:
 - Git

@@ -1,8 +1,8 @@
 ※ 変換済みのGeoJSONデータをお探しの場合、 https://front.geospatial.jp/moj-chizu-shp-download/ からダウンロードすることができます。(このプログラムをインストールする必要はありません)
 
-# Windows（WSL2を使用しない）で構築する方法
+# Windows（WSL2を使用しない）でビルドする方法
 
-このプロジェクトをWindowsで構築するには、次のものが必要です。
+このプロジェクトをWindowsでビルドするには、次のものが必要です。
 - Git
 - Python 3
 - pip 22以上
